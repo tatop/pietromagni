@@ -23,19 +23,3 @@ export default function ModeToggle() {
     </Button>
   );
 }
-
-function testToggle() {
-  const { theme, setTheme } = useTheme();
-  return (
-    <div
-      onClick={() => {
-        theme === "dark" ? setTheme("light") : setTheme("dark");
-      }}
-      className="mx-auto"
-    >
-      <a href="#">
-        <p>{theme === "dark" ? "Light" : "Dark"}</p>
-      </a>
-    </div>
-  );
-}
