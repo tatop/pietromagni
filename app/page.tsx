@@ -48,7 +48,7 @@ export default function Home() {
             <p className="font-semibold">Screfy</p>
 
             <p className="hidden text-gray-11 md:block">
-              Stay close while you're apart
+              Stay close while you&aposre apart
             </p>
 
             <span className="h-px flex-1 bg-gray-400" />
