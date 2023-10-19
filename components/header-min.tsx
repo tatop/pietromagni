@@ -18,22 +18,26 @@ export function Navbar({ title }: Props) {
       className={`flex flex-row items-center text-transparent justify-between px-2 py-2 mb-5 bg-gray-600/10 backdrop-blur-md rounded-xl
     ${
       scrolled
-        ? "fixed top-5 w-3/5 items-center md:text-white mx-auto left-0 right-0 z-50"
+        ? "md:fixed top-5 w-3/5 items-center md:text-white mx-auto left-0 right-0 z-50"
         : ""
     }`}
     >
-      <Avatar>
-        <AvatarImage src="/icon.png" alt="@shadcn" />
-        <AvatarFallback>CN</AvatarFallback>
-      </Avatar>
-      {title ? (
-        <div className="flex flex-col">
-          <h1 className="text-md font-bold">{title}</h1>
-        </div>
-      ) : null}
+      <div className="flex flex-row items-center gap-2">
+        <Link href={"/"}>
+          <Avatar>
+            <AvatarImage src="/icon.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+        </Link>
+        {title ? (
+          <div className="flex flex-col">
+            <h1 className="text-md font-bold">{title}</h1>
+          </div>
+        ) : null}
+      </div>
       <div>
         <div className="flex flex-row gap-3 items-center">
-          <Link href={"/"}>
+          <Link href={"/about"}>
             <Button variant="secondary" size="icon" className="rounded-xl">
               <PersonIcon />
             </Button>

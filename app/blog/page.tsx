@@ -24,29 +24,35 @@ export default async function BlogPage() {
           <h1 className="inline-block font-heading text-4xl tracking-tight lg:text-5xl">
             Blog
           </h1>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground pb-4">
             Articles about software development, productivity, and life.
           </p>
         </div>
       </div>
-      <hr className="my-8" />
       {posts?.length ? (
-        <div className="grid gap-10 sm:grid-cols-1">
+        <div className="grid gap-5 sm:grid-cols-1 -mx-4">
           {posts.map((post, index) => (
             <article
               key={post._id}
               className="group relative flex flex-col space-y-2 p-4 hover:bg-gray-300/10 hover:rounded-md"
             >
+              <div className="flex flex-row gap-2 items-center">
+                {post.date && (
+                  <p className="text-sm text-muted-foreground">
+                    {" "}
+                    {format(parseISO(post.date), "LLLL d, yyyy")}
+                  </p>
+                )}
+                <span className="text-sm text-muted-foreground">·</span>
+                <span className="text-sm text-muted-foreground">
+                  {post.meta.text}
+                </span>
+              </div>
               <h2 className="text-2xl font-extrabold">{post.title}</h2>
               {post.description && (
                 <p className="text-muted-foreground">{post.description}</p>
               )}
-              {post.date && (
-                <p className="text-sm text-muted-foreground">
-                  {" "}
-                  {format(parseISO(post.date), "LLLL d, yyyy")}
-                </p>
-              )}
+
               <Link href={post.slug} className="absolute inset-0">
                 <span className="sr-only">View Article</span>
               </Link>
