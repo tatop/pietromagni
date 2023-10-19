@@ -29,10 +29,9 @@ const Post = defineDocumentType(() => ({
     },
     meta: {
       type: "json",
-      resolve:
-        resolveTypedDocument <
-        { body: { raw: string } } >
-        (({ body }) => readingTime(body.raw)),
+      resolve: resolveTypedDocument<{ body: { raw: string } }>(({ body }) =>
+        readingTime(body.raw)
+      ),
     },
   },
 }));
@@ -51,7 +50,7 @@ export default makeSource({
       rehypeSlug,
       rehypeMathJax,
       [rehypeAutolinkHeadings, { behavior: "append" }],
-      [rehypePrettyCode, { codeOptions }],
+      [rehypePrettyCode, codeOptions],
     ],
   },
 });

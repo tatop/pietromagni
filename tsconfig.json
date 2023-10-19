@@ -31,7 +31,7 @@
     ".next/types/**/*.ts",
     ".contentlayer/generated",
     "content/blog/prova.mdx",
-    "contentlayer.config.js"
+    "contentlayer.config.ts"
   ],
   "exclude": ["node_modules"]
 }

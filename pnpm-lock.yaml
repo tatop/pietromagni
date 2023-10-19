@@ -54,7 +54,7 @@ dependencies:
     specifier: ^5.0.0
     version: 5.0.0
   rehype-pretty-code:
-    specifier: ^0.10.1
+    specifier: ^0.10.0
     version: 0.10.1(shiki@0.14.5)
   rehype-slug:
     specifier: ^6.0.0
@@ -65,6 +65,9 @@ dependencies:
   remark-math:
     specifier: ^6.0.0
     version: 6.0.0
+  shiki:
+    specifier: ^0.14.5
+    version: 0.14.5
   tailwind-merge:
     specifier: ^1.14.0
     version: 1.14.0
